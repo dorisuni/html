@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여섯번째 예제</title>
+    <style>
+        input,select{
+            border: 1px solid blue;
+            padding: 5px 20px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 입텩태그 -->
+    <form>
+        <!-- 인풋테그는 입력상자 플레이스홀더는 없어지는 힌트 밸류는 초기값 사이즈는 길이 -->
+        <input placeholder="아이디를 입력하세요." type="text" value="홍길동" size="10">
+        <hr>
+        <input type="password" placeholder="비밀번호" >
+        <hr>
+        <select>
+            <option value="01">컴정과</option>
+            <option value="02">전자과</option>
+            <option value="03">통신과</option>
+        </select>
+        
+        <hr>
+        <input value="M" name = "gender" type="radio">남 
+        <input value="F" name="gender" type="radio">여
+        <hr>
+        <input type="checkbox">영화감상
+        <input type="checkbox">등산
+        <input type="checkbox">게임
+        <input type="checkbox">음주
+
+        <hr>
+        <input type="submit" value="등록">
+        <input type="reset" value="취소">
+        <input type="button" value = "목록으로">
+        
+        <!-- 버튼은 섭밋하고 같은거임 -->
+        <button>버튼</button>
+
+    </form>
+
+</body>
+</html>
