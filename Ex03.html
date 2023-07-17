@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세번째예제</title>
+    <style>
+        /* 아이디가 div1인것만 선택하기 */
+        #div1{
+           background: green; 
+        }
+        #div2, #div3{
+           background: yellow; 
+        }
+        /* 또는은 컴마 and는 그냥 붙여씀 */
+        /* 클래스를 지정할때는 점을 쓴다. */
+        .diva{
+            padding: 10px;
+            margin: 10px;
+        }
+        #div3 span{
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 이미지도 마감테그 없음 -->
+    <img src="moon.jpg" width="200"><img src="moon.jpg"><img src="moon.jpg">
+    <!-- 의미없는 더미이미지 가져올때 -->
+    <br>
+    <img src ="https://via.placeholder.com/500x500">
+
+    <!-- 영역설정할때 -->
+    <div id = "div1" class="diva">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+    </div>
+
+    <div id = "div2" class = "diva">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+        <img src="moon.jpg">
+    </div>
+    <div id = "div3" class="diva">
+        <span>안녕하세요!</span>
+        <br>
+        <span>반갑습니다.</span>
+
+
+    </div>
+
+</body>
+</html>

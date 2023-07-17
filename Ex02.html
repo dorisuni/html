@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두번째 예제입니다.</title>
+    <style>
+        li {
+            font-size: 2rem;
+            color:brown;
+        }
+        table{
+            margin-top: 100px;
+            border-collapse: collapse;
+            margin: 0px auto;
+
+        }
+        td{
+            text-align: center;
+            border: 1px dotted blue;
+            padding: 10px 30px 10px 30px;
+            /* 위 아래 오른쪽 왼쪽 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 목록출력 -->
+    <hi>과일목록</hi>
+    <ul>
+        <li>딸기</li>
+        <li>수박</li>
+        <li>바나나</li>
+
+    </ul>
+
+
+
+    <!-- 이렇게 보면 ul은 선입선출로 출력 마찬가지로 ol도 선입선출로 출력하지만 숫자를 매겨줌 -->
+    <ol>
+        <li>딸기</li>
+        <li>수박</li>
+        <li>바나나</li>
+    </ol>
+    <!-- 테이블 테그 -->
+    <table>
+        <tr>
+            <td>1행1열</td>
+            <!-- 이렇게 개별적으로도 속성값을 줄 수 있음. 컬러 등 -->
+            <td style="background:pink;color: white;">1행2열</td>
+            <td>1행3열</td>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <td>3행3열</td>
+        </tr>
+    </table>
+
+    <br>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td colspan="3">3</td>
+
+        </tr>
+
+        <tr>
+            <td colspan="2">4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+
+        <tr>
+            
+            <td>8</td>
+            <td>9</td>
+            <td rowspan="3">10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+
+        <tr>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+
+
+    </table>
+
+
+</body>
+</html>
