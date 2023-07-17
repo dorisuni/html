@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- cdn은 라이브러리가 있는 주소임. 저기에 접속하면 라이브러리를 사용할 수 있다. 자바스크립트를 쉽게 사용할 수 있도록 하는 라이브러리. -->
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일곱번째 예제</title>
+</head>
+
+<body>
+    <button onClick="sum()">1~100까지의 합계 출력하기</button>
+    <h1>
+        1부터 100까지 결과:<span id="sum">0</span>
+    </h1>
+    <hr>
+    <button id="btnsum">Jquery를 이용한 1~100까지의 합 출력</button>
+
+</body>
+
+
+<script>
+    //sum이란 버튼을 눌렀을 때, jquery를 사용하려면 $을 써야한다. 
+    $("#btnsum").on("click", function () {
+        let sum = 0;
+        for (let i = 2; i <= 100; i = i + 2) {
+            sum = sum + i;
+        }
+        $("#sum").html(`<i>${sum}</i>`);
+    });
+
+
+
+    // 메소드에 해당하는것이 함수이다. 자바스크립트에서는 
+
+    function sum() {
+        let sum = 0;
+        for (let i = 1; i <= 100; i++) {
+            sum += i;
+            // `는 변수와 문자를 같이 쓸 수 있다.
+        }
+        // alert(`1~100합계=${sum}`);
+        // id가 sum인곳에 잇는 주소를 가져와라.
+        let span_sum = document.getElementById("sum");
+        span_sum.innerHTML = sum;
+    }
+</script>
+
+</html>
