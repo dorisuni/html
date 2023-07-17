@@ -42,7 +42,11 @@
     $("#tbl").on("click",".row button",function(){
         // alert('삭제하실래요?');
         let row=$(this).parent().parent();
-        row.remove();
+        let name=row.find(".name").html();
+        if(confirm(`${name}을 삭제하실래요?`)){
+            row.remove(); 
+        }
+        
     })
     //폼이 summit될때 
     //프리벤트디폴트는 방지하다막다이런의미고 디폴트이벤트를 막아라. 
@@ -65,7 +69,7 @@
                 console.log(no,name,juso);
                 let html='<tr class ="row">';
                     html+='<td>' + no + '</td>';
-                    html+='<td>' + name + '</td>';
+                    html+='<td class = "name">' + name + '</td>';
                     html+='<td>' + juso + '</td>';
                     html+='<td><button>삭제</button></td>';
                     html+='</tr>';
