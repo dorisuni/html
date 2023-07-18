@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+    <style>
+        #posts{
+            width: 800px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 출력할 영역     -->
+    <div id="posts"></div>
+    <!-- 출력할템플릿 이건 틀이라고 보면 된다. -->
+    <script id = "temp_posts" type="text/x-handlebars-template">
+        {{#each .}}
+            <h5>{{id}}:{{title}}</h5>
+            <hr>
+            <p>{{completed}}</p>
+        {{/each}}
+    </script>
+
+</body>
+
+<script>
+    // 게시글 목록 데이터출력
+    getTodos();
+    function getTodos(){
+        //http통신으로 가져오는것
+        $.ajax({
+            type:"get",
+            //rest api라고 한다.
+            url:"https://jsonplaceholder.typicode.com/todos",
+            dateType:"json",
+            success:function(data){
+                const rows = data.filter(post=>post.id<=5);
+                console.log(rows);
+                //1.템플릿 컴파일
+                let compile_temp=Handlebars.compile($("#temp_posts").html());
+                //2.템플릿에 출력할 데이터 넣어주기
+                let html = compile_temp(rows);
+                //3. 출력영역에 html을 넣어주기.
+                $("#posts").html(html);
+            }
+        });
+    }
+</script>
+
+
+</html>

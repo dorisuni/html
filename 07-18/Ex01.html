@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
     <title>첫번째예제</title>
     <!-- 태그를 예쁘게 꾸미는건 다 여기서 style주는거임. -->
     <!-- 외부 css파일을 사용하기 -->
@@ -28,10 +29,23 @@
     </form>
 
     <h1 class="title">상품목록</h1>
-    <table id = "tbl">
+    <!-- 상품목록이 출력될 공간 -->
+    
+    <div id ="list"></div>
 
-    </table>
-
+    <!-- 상품목록이 들어갈 템플릿 -->
+    <script id = "temp" type="text/x-handlebars-template">
+        <table>
+            {{#each .}}
+            <tr class="row" index="{{@index}}">
+                <td>{{code}}</td>
+                <td class="name">{{name}}</td>
+                <td>{{price}}</td>
+                <td><button>삭제</button></td>
+            </tr>
+            {{/each}}  
+        </table>
+    </script>
 
 
 
@@ -44,9 +58,9 @@
     //각행의 삭제버튼 클릭한 경우
 
     //tr로 갈려면 두번 올라가야한다.
-    $("#tbl").on("click","tr td button",function(){
+    $("#list").on("click","tr td button",function(){
         let row = $(this).parent().parent();
-        let code =row.find(".code").text();
+        let code =row.find(".name").text();
         //attr는 해당 속성값을 가져오라는 말임
         let index = row.attr("index");
         if(confirm(code + ' 삭제하실래요?'))
@@ -70,18 +84,10 @@
 
     //목록을 출력하는 함수
     function getList(){
-        //화살표 함수를 선언하는거 p가 매개변수
-        let html= "";
-        products.forEach((p, index)=>{
-            // console.log(p);
-            html+=`<tr class='row' index=${index}>`;
-            html+=`<td class='code'>${p.code}</td><td>${p.name}</td><td>${p.price}</td>`;
-            html+="<td><button>삭제</button></td>";
-            html+="</tr>";
-        })
-        
-        $("#tbl").html(html);
+        let temp=Handlebars.compile($("#temp").html());
+        $("#list").html(temp(products));
     }
+    
 
 
 
@@ -125,6 +131,8 @@
         }
 
     });
+
+    
 
 
 </script>
