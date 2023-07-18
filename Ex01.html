@@ -51,14 +51,14 @@
         let index = row.attr("index");
         if(confirm(code + ' 삭제하실래요?'))
         {   
-            //json데이터 안에 index번째 정보를 삭제하는 법은 pop
+            //json데이터 안에 index번째 정보를 삭제하는 법은 splice
             products.splice(index,1);
             getList();
         }
     })
 
 
-
+    //데이터 넣기
     let products =[
     //상품 json 데이터    
     //이런데이터타입을 json데이터라고 함.
