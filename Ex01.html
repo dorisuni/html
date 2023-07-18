@@ -1,120 +1,133 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>첫번째 예제입니다. 야호 </title>
-    <style>
-        h1 {
-            color: green;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <title>첫번째예제</title>
+    <!-- 태그를 예쁘게 꾸미는건 다 여기서 style주는거임. -->
+    <!-- 외부 css파일을 사용하기 -->
+    <link rel="stylesheet" href="style.css" />
 
-        a {
-            font-size: 10px;
-        }
-    </style>
-    <script>
-        //스크립트에서는 주석을 이렇게 할 수 있음. (자바문법과 비슷하다고 하면 됨, JAVASCRIPT임.)
-        let sum = 0;
-        for (let i = 1; i <= 100; i++) {
-            sum += i;
-        }
-        console.log('1~100까지의 합=', sum);
-        //저장하는 값은 const를 쓰면 됨.(변하지 않는 값)
-    </script>
 
 </head>
 
 <body>
-    <h1><del>What is Lorem Ipsum?</del></h1>
+    <h1 class="title">상품관리</h1>
+    <!-- 입력폼 -->
+    <form name = "frm">
+        <input name="code" placeholder="상품코드" size="10">
+        <hr>
+        <input name="name" placeholder="상품이름" size="50">
+        <hr>
+        <input name="price" type="number" size="10" step="1000">원
+        <hr>
+        <input type="submit" value="상품등록">
+        <input type="reset" value="등록취소">
+    </form>
 
-    <p id="frist"><b><i><u>Lorem Ipsum</u> </b></i>is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <h1 class="title">상품목록</h1>
+    <table id = "tbl">
 
-    <br><!-- 이게 주석처리란다. <- 저 br은 줄바꿈임. hr은 수평선 죽 그어지는거고. -->
-    <br>
-    <br>
-    <hr>
-    <h1>
-        Where does it come from?
-    </h1>
-
-
-
-    <p1>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-        going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
-        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
-        form, accompanied by English versions from the 1914 translation by H. Rackham.
-    </p1>
-    <p1>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-        going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
-        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
-        form, accompanied by English versions from the 1914 translation by H. Rackham.
-    </p1>
-    <p1>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-        going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
-        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
-        form, accompanied by English versions from the 1914 translation by H. Rackham.
-    </p1>
-    <p1>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-        going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
-        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
-        form, accompanied by English versions from the 1914 translation by H. Rackham.
-    </p1>
-    <p1>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-        going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
-        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
-        form, accompanied by English versions from the 1914 translation by H. Rackham.
-    </p1>
+    </table>
 
 
-    <a href="http://www.naver.com">네이버</a>
-    <a href="http://www.google.com">구글</a>
-    <a href="Ex03.html">연습3</a>
-    <a href="#frist">문서의처음</a>
+
+
 </body>
 
-</html>ㅁ
+<script>
+    let code =103;
+    $(frm.code).val(code);
+    
+    //각행의 삭제버튼 클릭한 경우
+
+    //tr로 갈려면 두번 올라가야한다.
+    $("#tbl").on("click","tr td button",function(){
+        let row = $(this).parent().parent();
+        let code =row.find(".code").text();
+        //attr는 해당 속성값을 가져오라는 말임
+        let index = row.attr("index");
+        if(confirm(code + ' 삭제하실래요?'))
+        {   
+            //json데이터 안에 index번째 정보를 삭제하는 법은 pop
+            products.splice(index,1);
+            getList();
+        }
+    })
+
+
+
+    let products =[
+    //상품 json 데이터    
+    //이런데이터타입을 json데이터라고 함.
+        {code:100,name:'오브제 냉장고',price:2500000},
+        {code:101,name:'오브제 세탁기',price:1500000},
+        {code:102,name:'오브제 스타일러',price:1200000}
+    ]
+    getList();
+
+    //목록을 출력하는 함수
+    function getList(){
+        //화살표 함수를 선언하는거 p가 매개변수
+        let html= "";
+        products.forEach((p, index)=>{
+            // console.log(p);
+            html+=`<tr class='row' index=${index}>`;
+            html+=`<td class='code'>${p.code}</td><td>${p.name}</td><td>${p.price}</td>`;
+            html+="<td><button>삭제</button></td>";
+            html+="</tr>";
+        })
+        
+        $("#tbl").html(html);
+    }
+
+
+
+
+    //form이 summit될때 유효성 체크하기
+    //name은 아무것도 안적는게 rule
+    //id는 # 클래스는 .
+    //원래는 함수이름이 있어야 하는데 익명함수는 함수이름이 없어도됨
+    //중괄호 안에 펑션이 들어가는거임.
+    $(frm).on("submit",function(event){
+        event.preventDefault(); //기본 펑션 막기(summit를 막는거임)
+        let code = $(frm.code).val();
+        let name = $(frm.name).val();
+        let price = $(frm.price).val();
+        
+        if(code==""){
+            alert("상품코드를 입력하세요.");
+            $(frm.code).focus();
+        }else if (name==""){
+            alert("상품이름을 입력하세요.");
+            $(frm.name).focus();
+        }else if (price==""){
+            alert("상품가격을 입력하세요!");
+            $(frm.price).focus();
+        }else{
+            if(confirm("새로운 상품을 등록할까요?")){
+                //  값이 변하지 않는 상수는 const
+                const product = {code:code,name:name,price:price};
+
+                //html에서 add를 push라고 함.
+
+                products.push(product);
+                getList();
+                //백틱 쓰는이유는 변수와 이름 같이출력하려고
+                alert(`상품코드:${code}\n상품이름:${name}\n상품가격:${price}원\n등록완료!`)
+                code++;
+                $(frm.code).val(code);
+            }else{
+                alert("등록이 취소되었습니다.")
+            }
+        }
+
+    });
+
+
+</script>
+
+
+</html>
