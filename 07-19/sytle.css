@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Orbit&display=swap');
+/* 바디만 하고싶으면 */
+*{
+    font-family: 'Orbit', sans-serif;
+}
