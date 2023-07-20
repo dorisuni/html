@@ -3,9 +3,15 @@
 *{
     font-family: 'Orbit', sans-serif;
 }
-/* 말줄임표 */
+
+
+
+/* 한줄이 넘으면 (...) 말줄임표 */
 .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;	
   }
+
+
+
