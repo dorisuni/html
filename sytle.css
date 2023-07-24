@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Orbit&display=swap');
+/* 바디만 하고싶으면 body 아니면 *을 써주면 된다.*/
+*{
+    font-family: 'Orbit', sans-serif;
+}
+
+
+
+/* 한줄이 넘으면 (...) 말줄임표 */
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;	
+  }
+
+
+
